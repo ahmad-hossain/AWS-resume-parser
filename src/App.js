@@ -4,6 +4,7 @@ import { useState } from 'react';
 import FileCard from './components/FileCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
+const BASE_URL = 'https://wvcsbyypc0.execute-api.us-east-1.amazonaws.com/dev';
 
 function App() {
   const [selectedFile, setSelectedFile] = useState();
@@ -16,7 +17,7 @@ function App() {
     console.log('Search clicked')
     if (searchText == '') return;
     fetch(
-      'http://localhost:4000/search/' + searchText,
+      BASE_URL + '/search?query=' + searchText,
       {
         method: 'GET'
       }
@@ -39,7 +40,7 @@ function App() {
     formData.append('pdfFile', selectedFile);
 
     fetch(
-      'http://localhost:4000/parse',
+      BASE_URL + '/upload',
       {
         method: 'POST',
         body: formData,

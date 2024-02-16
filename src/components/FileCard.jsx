@@ -4,9 +4,9 @@ import download from 'downloadjs'
 export default function FileCard({ file }) {
     const handleDownload = async () => {
         console.log('Clicked Dowload');
-        const res = await fetch('http://localhost:4000/download/' + file.fileIndex)
+        const res = await fetch('https://ahmad-resume-parser-resumes.s3.amazonaws.com/' + file.id)
         const blob = await res.blob();
-        download(blob, 'resume.pdf');
+        download(blob, file.id);
     }
 
     return (
