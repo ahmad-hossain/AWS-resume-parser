@@ -49,7 +49,7 @@ async function uploadToDynamoDb(file) {
   const result = await pdf(file.content);
   console.log('PDF parsed', result.text);
 
-  let words = result.text.split(' ');
+  let words = result.text.split(/,|\s/)
 
   let phone = phoneRegex.exec(result.text)
   phone = phone == null ? 'null' : phone[0]
