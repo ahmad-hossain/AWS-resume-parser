@@ -3,6 +3,10 @@
 A PDF Resume Parser and Search System meant to simulate what a recruiter would use to search for candidates
 
 This project is a fork of [github.com/ahmad-hossain/resume-parser](https://github.com/ahmad-hossain/resume-parser) that uses AWS services to host the app and parse & store data rather than using an Express.js backend.
+
+## Gif Walkthrough
+<img src="https://github.com/ahmad-hossain/AWS-resume-parser/blob/main/walkthrough.gif" width=800><br>
+
 ## Description
 
 This is a full-stack project that parses Resume PDF files and displays a dashboard allowing a user to search for keywords. Doing so will populate a list of all candidates whos Resume contained the keyword.
