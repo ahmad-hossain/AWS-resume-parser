@@ -1,5 +1,5 @@
 {
-  "name": "parse",
+  "name": "upload",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pdf-parse": "^1.1.1"
+    "aws-sdk": "^2.1558.0",
+    "compromise": "^14.11.2",
+    "lambda-multipart-parser": "^1.0.1",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^9.0.1"
   }
 }
